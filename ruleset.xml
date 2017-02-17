@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<ruleset name="Wedge">
+     <description>The coding standard for Wedge.</description>
+
+     <file>./src/</file>
+
+     <!-- Make sure function arguments are seperated by whitespace (on declare and call) -->
+     <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing"/>
+     <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>"
+
+     <!-- Check that brace on function declaration is on a new line -->
+     <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+
+     <!-- There should be spaces after if/for etc keywords -->
+     <rule ref="Squiz.ControlStructures.ControlSignature.SpaceAfterKeyword"/>
+
+     <!-- -->
+     <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
+
+     <rule ref="Squiz.ControlStructures.ForLoopDeclaration"/>
+     <!-- Check for unused function parameters -->
+     <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+
+     <!-- use double quotes only where needed -->
+     <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired"/>
+
+
+     <!-- make sure all functions are commented -->
+     <rule ref="PEAR.Commenting.FunctionComment">
+         <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamType"/>
+     </rule>
+
+     <!-- Make sure function comments have a nice syntax s-->
+     <rule ref="Squiz.Commenting.FunctionComment">
+         <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
+     </rule>
+
+     <!-- make sure there are class comments -->
+      <rule ref="PEAR.Commenting.ClassComment">
+          <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
+          <exclude name="PEAR.Commenting.ClassComment.MissingPackageTag"/>
+          <exclude name="PEAR.Commenting.ClassComment.MissingAuthorTag"/>
+          <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
+          <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
+    </rule>
+
+    <!-- class braces should be in a new line -->
+    <rule ref="Squiz.Classes.ClassDeclaration.OpenBraceNewLine"/>
+
+     <!-- Warns about TODO comments. -->
+     <rule ref="Generic.Commenting.Todo"/>
+
+     <!-- Make sure no doc comment is empty -->
+     <rule ref="Generic.Commenting.DocComment.Empty">
+         <exclude name="Generic.Commenting.DocComment.SpacingBeforeTags"/>
+         <exclude name="Generic.Commenting.DocComment.ParamGroup"/>
+         <exclude name="Generic.Commenting.DocComment.NonParamGroup"/>
+     </rule>
+
+     <!-- Function closing brace must go on the next line following the body -->
+     <rule ref="PSR2.Methods.FunctionClosingBrace.SpacingBeforeClose" />
+
+
+     <!--
+     <rule ref="Generic"/>
+     <rule ref="PSR2"/>
+     <rule ref="Squiz"/>
+     -->
+
+</ruleset>
